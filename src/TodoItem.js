@@ -5,7 +5,6 @@ import Icon from '@mdi/react'
 import { mdiCheckboxBlankOutline, mdiCheckboxMarked, mdiDelete } from '@mdi/js'
 
 const Item = styled.div`
-  color: white;
   margin: 1rem 0;
   display: flex;
   justify-content: space-between;

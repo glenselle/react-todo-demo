@@ -14,6 +14,7 @@ const uuid = () => {
 
 const ListWrapper = styled.div`
   width: 50%;
+  max-width: 500px;
 `
 
 function TodoList() {

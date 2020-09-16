@@ -8,10 +8,15 @@ const StyledInput = styled.input`
   outline: none;
   padding: 20px;
   background: rgb(0, 0, 0, 0);
-  color: white;
-  border: 3px solid white;
+  color: #000;
+  border: 3px solid #000;
   margin-bottom: 2rem;
   font-size: 2rem;
+  
+  @media (prefers-color-scheme: dark) {
+    color: #fff;
+    border: 3px solid #fff;
+  }
 `
 
 function ItemInput ({ onCreate }) {
@@ -20,7 +25,7 @@ function ItemInput ({ onCreate }) {
     onCreate(inputRef.current.value)
     inputRef.current.value = ''
   }
-  const onKeyDown = e => e.key === 'Enter' ? enterFlow() : null
+  const onKeyDown = e => (e.key === 'Enter' && e.target.value !== '') ? enterFlow() : null
 
   return <StyledInput ref={inputRef} onKeyDown={onKeyDown} placeholder="enter a todo" />
 }

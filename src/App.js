@@ -16,7 +16,6 @@ const Header = styled.h3`
   font-family: 'Monoton', cursive;
   font-size: 6rem;
   font-weight: 100;
-  color: #fff;
   margin: 4rem;
 `
 
